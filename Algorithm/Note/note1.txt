@@ -1,0 +1,13 @@
+master公式的使用——估计一系列递归问题的公式
+T(N)=a*T(N/b) + O(N^d)
+    1）log(b,a)>d -> 时间复杂度为O(N^log(b,a))
+    2) log(b,a)=d -> 时间复杂度为O((N^d)*logN)
+    3) log(b,a)<d -> 时间复杂度为O（N^d) 
+
+
+C++中的哈希表
+    只有key但是没有伴随数据value，可以使用UnOrderedSet
+    只有key而且有伴随数据value，可以使用UnOrderedMap
+C++中的有序表
+    只有key但是没有伴随数据value，可以使用OrderedSet
+    只有key而且有伴随数据value，可以使用OrderedMap

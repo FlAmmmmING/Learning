@@ -1,0 +1,2 @@
+delete count;
+        count = NULL;
