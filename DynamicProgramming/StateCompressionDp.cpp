@@ -67,9 +67,9 @@ void SCdp02()
     for (int i = 0; i < 1 << n; i++) // 开始枚举i的所有情况
         for (int j = 0; j < n; j++) // j表示走到哪一个点
             if (i >> j & 1) // 合法的判断
-                for (int k = 0; k < n; k++)
+                for (int k = 0; k < n; k++) // k是j的前一个点
                     if (i >> k & 1) // 合法的判断
-                        dp[i][j] = min(dp[i][j], dp[i - (1 << j)][k] + w[k][j]);
+                        dp[i][j] = min(dp[i][j], dp[i - (1 << j)][k] + w[k][j]); // 如何保证k是j的前一个点，这里w[k][j]就说明了从k走到j
     cout << dp[(1 << n) - 1][n - 1] << '\n';
 }
 
